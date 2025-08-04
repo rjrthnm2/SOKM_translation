@@ -13,9 +13,9 @@ A comprehensive machine translation pipeline for English-to-Spanish translation 
 - **Clean notebook management**: Automatic output stripping for cleaner Git history
 - **Comprehensive pipeline**: Includes transcription, cleaning, translation, and validation tools
 
-For detailed technical architecture, see [Architecture Documentation](docs/architecture.md).
+For detailed technical architecture, see [Architecture Documentation](docs/ARCHITECTURE.md).
 
-For detailed info on the development process, see [Development Documentation](docs/development.md).
+For detailed info on the development process, see [Development Documentation](docs/DEVELOPMENT.md).
 
 ## Privacy Notice
 
