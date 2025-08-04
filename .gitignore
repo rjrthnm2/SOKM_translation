@@ -43,6 +43,12 @@ wheels/
 en_es_dictionary.txt
 system_prompt_*.txt
 
+#Current development files
+SOKM_es_editor.ipynb
+
+# Testing files
+SOKM_testing.ipynb
+
 # Logs
 *.log
 
