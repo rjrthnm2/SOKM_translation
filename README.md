@@ -9,6 +9,9 @@ A comprehensive machine translation pipeline for English-to-Spanish translation 
 - **Batch processing**: Efficient handling of large CSV datasets
 - **Automated evaluation**: BLEU, METEOR, WER, and COMET metrics
 - **Context preservation**: Maintains translation consistency across segments
+- **Privacy protection**: Automatic exclusion of sensitive files from version control
+- **Clean notebook management**: Automatic output stripping for cleaner Git history
+- **Comprehensive pipeline**: Includes transcription, cleaning, translation, and validation tools
 
 ## Privacy Notice
 
@@ -18,8 +21,18 @@ This public repository contains the core translation pipeline code but excludes:
 - **Dictionary files** (`en_es_dictionary.txt`) - Contains specialized terminology mappings
 - **API keys** (`.env` files) - Protected environment variables
 - **Data files** - Input/output CSV files with potentially sensitive content
+- **Development files** (`SOKM_es_editor.ipynb`, `SOKM_testing.ipynb`) - Work-in-progress notebooks
+- **Testing folder** (`testing/`) - Experimental and test files
 
 See `system_prompt_example.md` for the general structure of system prompts.
+
+## Repository Configuration
+
+This repository is configured with:
+
+- **Automatic notebook output cleaning**: Cell outputs are automatically stripped when committing to prevent large diffs and maintain clean version history
+- **Git filters**: Configured to handle notebook files appropriately for collaboration
+- **Privacy protection**: Sensitive files are automatically excluded from version control
 
 ## Setup
 
@@ -78,12 +91,28 @@ The reference CSV should have:
 
 ```
 Final pipeline/
-├── .env                              # API keys (private)
-├── en_es_dictionary.txt              # Dictionary (private)
-├── system_prompt_*.txt               # System prompts (private)
+├── .env                              # API keys (private, not tracked)
+├── en_es_dictionary.txt              # Dictionary (private, not tracked)
+├── system_prompt_*.txt               # System prompts (private, not tracked)
 ├── system_prompt_example.md          # Public example structure
+├── SOKM_es_editor.ipynb              # Development notebook (private, not tracked)
+├── SOKM_testing.ipynb                # Testing notebook (private, not tracked)
 ├── SOKM_machine_translation.ipynb    # Main translation pipeline
-└── other_notebooks.ipynb            # Additional processing tools
+├── SOKM_transcription_cleaning.ipynb # Text cleaning utilities
+├── SOKM_whisperx_transcribe.ipynb    # Audio transcription tools
+├── SOKM_validation_GT.ipynb          # Ground truth validation
+├── SOKM_srt_csv_converter.ipynb      # SRT/CSV conversion utilities
+└── SOKM_subtitles.ipynb              # Subtitle processing tools
+
+testing/                              # Experimental files (not tracked)
+├── SOKM_whisperx_transcribe_and_translate.ipynb
+└── other_test_files...
+
+Repository Configuration:
+├── .gitignore                        # Excludes private/sensitive files
+├── .gitattributes                    # Configures Git filters for notebooks
+├── clear_notebook_outputs.bat       # Manual output clearing utility (Windows)
+└── clear_notebook_outputs.sh        # Manual output clearing utility (Linux/Mac)
 ```
 
 ## Models
@@ -107,14 +136,48 @@ Where:
 - `openai_gpt_4_1` is the model identifier
 - `pv2.0` is the system prompt version
 
+## Notebook Management
+
+This repository includes automatic notebook output cleaning:
+
+### Automatic Output Stripping
+- **Git filter configured**: Notebook cell outputs are automatically removed when committing
+- **Clean version history**: No large diffs from cell outputs in Git history
+- **Local outputs preserved**: Your working notebooks keep outputs for development
+- **Collaboration friendly**: No merge conflicts from output differences
+
+### Manual Output Clearing
+Two utility scripts are provided for manual cleaning:
+
+- **Windows**: `clear_notebook_outputs.bat`
+- **Linux/Mac**: `clear_notebook_outputs.sh`
+
+These scripts will clear outputs from all notebooks in the repository.
+
 ## Contributing
 
 When contributing, ensure:
 
 - No API keys or sensitive data in commits
-- System prompts and dictionaries remain private
+- System prompts and dictionaries remain private (automatically excluded)
 - Generic examples for configuration
-- Proper `.gitignore` coverage
+- Notebook outputs are automatically cleaned by Git filters
+- Use the provided utility scripts to manually clear outputs if needed
+
+### Development Workflow
+
+1. **Clone the repository**: Private files won't be included automatically
+2. **Create your own `.env` file** with your API keys
+3. **Add your own system prompts and dictionaries** (they'll be ignored by Git)
+4. **Work normally**: Notebook outputs will be automatically stripped on commit
+5. **Manual cleanup**: Use `clear_notebook_outputs.bat` (Windows) or `clear_notebook_outputs.sh` (Linux/Mac) if needed
+
+### Repository Maintenance
+
+The repository uses:
+- **Git filters** to automatically clean notebook outputs
+- **`.gitattributes`** to handle file types appropriately
+- **`.gitignore`** to exclude sensitive and private files
 
 ## License
 
