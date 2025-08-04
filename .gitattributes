@@ -13,7 +13,8 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Jupyter notebooks should use LF line endings for consistency across platforms
-*.ipynb text eol=lf
+# and automatically strip output cells when committing to Git
+*.ipynb text eol=lf filter=strip-notebook-output
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # Text files
