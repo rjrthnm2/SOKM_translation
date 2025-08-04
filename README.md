@@ -13,6 +13,10 @@ A comprehensive machine translation pipeline for English-to-Spanish translation 
 - **Clean notebook management**: Automatic output stripping for cleaner Git history
 - **Comprehensive pipeline**: Includes transcription, cleaning, translation, and validation tools
 
+For detailed technical architecture, see [Architecture Documentation](docs/architecture.md).
+
+For detailed info on the development process, see [Development Documentation](docs/development.md).
+
 ## Privacy Notice
 
 This public repository contains the core translation pipeline code but excludes:
@@ -100,6 +104,10 @@ Final pipeline/
 ├── SOKM_validation_GT.ipynb          # Ground truth validation
 ├── SOKM_srt_csv_converter.ipynb      # SRT/CSV conversion utilities
 └── SOKM_subtitles.ipynb              # Subtitle processing tools
+
+docs/                                 # Documentation
+├── architecture.md                   # Technical architecture details
+└── development.md                    # Development guidelines and setup
 
 testing/                              # Experimental files (not tracked)
 └── other_test_files...
