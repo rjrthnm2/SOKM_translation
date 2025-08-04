@@ -25,7 +25,6 @@ lib64/
 parts/
 sdist/
 var/
-testing/
 wheels/
 *.egg-info/
 .installed.cfg
@@ -55,3 +54,6 @@ SOKM_testing.ipynb
 # OS
 .DS_Store
 Thumbs.db
+
+# Remove folder testing from git tracking
+/testing/
