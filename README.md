@@ -1,4 +1,4 @@
-# SOKM Translation Pipeline
+# School of Kingdom Ministry (SOKM) Translation Pipeline
 
 A comprehensive machine translation pipeline for English-to-Spanish translation using OpenAI GPT and Google Gemini models, with dictionary-enhanced accuracy and automated evaluation to translate training videos from a local church in English to English audio with Spanish subtitles.
 
