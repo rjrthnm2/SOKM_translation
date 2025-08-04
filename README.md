@@ -21,7 +21,6 @@ This public repository contains the core translation pipeline code but excludes:
 - **Dictionary files** (`en_es_dictionary.txt`) - Contains specialized terminology mappings
 - **API keys** (`.env` files) - Protected environment variables
 - **Data files** - Input/output CSV files with potentially sensitive content
-- **Development files** (`SOKM_es_editor.ipynb`, `SOKM_testing.ipynb`) - Work-in-progress notebooks
 - **Testing folder** (`testing/`) - Experimental and test files
 
 See `system_prompt_example.md` for the general structure of system prompts.
@@ -95,8 +94,6 @@ Final pipeline/
 ├── en_es_dictionary.txt              # Dictionary (private, not tracked)
 ├── system_prompt_*.txt               # System prompts (private, not tracked)
 ├── system_prompt_example.md          # Public example structure
-├── SOKM_es_editor.ipynb              # Development notebook (private, not tracked)
-├── SOKM_testing.ipynb                # Testing notebook (private, not tracked)
 ├── SOKM_machine_translation.ipynb    # Main translation pipeline
 ├── SOKM_transcription_cleaning.ipynb # Text cleaning utilities
 ├── SOKM_whisperx_transcribe.ipynb    # Audio transcription tools
@@ -105,7 +102,6 @@ Final pipeline/
 └── SOKM_subtitles.ipynb              # Subtitle processing tools
 
 testing/                              # Experimental files (not tracked)
-├── SOKM_whisperx_transcribe_and_translate.ipynb
 └── other_test_files...
 
 Repository Configuration:
@@ -141,12 +137,13 @@ Where:
 This repository includes automatic notebook output cleaning:
 
 ### Automatic Output Stripping
+
 - **Git filter configured**: Notebook cell outputs are automatically removed when committing
 - **Clean version history**: No large diffs from cell outputs in Git history
 - **Local outputs preserved**: Your working notebooks keep outputs for development
-- **Collaboration friendly**: No merge conflicts from output differences
 
 ### Manual Output Clearing
+
 Two utility scripts are provided for manual cleaning:
 
 - **Windows**: `clear_notebook_outputs.bat`
@@ -175,6 +172,7 @@ When contributing, ensure:
 ### Repository Maintenance
 
 The repository uses:
+
 - **Git filters** to automatically clean notebook outputs
 - **`.gitattributes`** to handle file types appropriately
 - **`.gitignore`** to exclude sensitive and private files
