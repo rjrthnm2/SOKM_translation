@@ -1,10 +1,10 @@
 # SOKM Translation Pipeline
 
-A comprehensive machine translation pipeline for English-to-Spanish translation using OpenAI GPT and Google Gemini models, with dictionary-enhanced accuracy and automated evaluation.
+A comprehensive machine translation pipeline for English-to-Spanish translation using OpenAI GPT and Google Gemini models, with dictionary-enhanced accuracy and automated evaluation to translate training videos from a local church in English to English audio with Spanish subtitles.
 
 ## Features
 
-- **Multi-provider support**: OpenAI GPT-4o and Google Gemini
+- **Multi-provider support**: OpenAI GPT and Google Gemini models
 - **Dictionary-enhanced translation**: Uses spaCy for intelligent term matching
 - **Batch processing**: Efficient handling of large CSV datasets
 - **Automated evaluation**: BLEU, METEOR, WER, and COMET metrics
@@ -113,7 +113,7 @@ Repository Configuration:
 
 ## Models
 
-- **OpenAI**: GPT-4o with JSON response formatting
+- **OpenAI**: GPT-4.1 with JSON response formatting
 - **Google**: Gemini 2.5 Pro with structured output
 - **spaCy**: en_core_web_trf for linguistic analysis
 - **COMET**: Unbabel/wmt22-comet-da for translation evaluation
