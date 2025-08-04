@@ -38,6 +38,10 @@ wheels/
 *.xlsx
 *.json
 
+# Private content - dictionaries and system prompts
+en_es_dictionary.txt
+system_prompt_*.txt
+
 # Logs
 *.log
 
