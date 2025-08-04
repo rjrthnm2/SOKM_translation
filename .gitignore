@@ -57,3 +57,7 @@ Thumbs.db
 
 # Remove folder testing from git tracking
 /testing/
+
+# Utility scripts (keep local)
+clear_notebook_outputs.sh
+clear_notebook_outputs.bat
