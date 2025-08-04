@@ -15,7 +15,7 @@ The system prompts in this project follow a structured format:
   - Fixed phrase mappings (domain-specific terminology)
   - Words/phrases that should not be translated
   - Grammar conventions (gender, number, formality)
-  - Output formatting requirements
+- **Output formatting**: JSON formatting requirements
 
 ### Cleaning Prompts (`system_prompt_cleaning_*.txt`)
 
@@ -26,16 +26,7 @@ The system prompts in this project follow a structured format:
   - Standardizing punctuation and capitalization
   - Handling speaker changes and timestamps
   - Preserving semantic meaning while improving readability by removing disfluencies
-
-### Editor Prompts (`system_prompt_editor_*.txt`)
-
-- **Role**: Defines the AI as a text editor
-- **Goal**: Specifies post-processing and refinement tasks
-- **Instructions**: Contains guidelines for:
-  - Final quality assurance checks
-  - Consistency improvements
-  - Cultural adaptation considerations
-  - Format standardization
+- **Output formatting**: JSON formatting requirements
 
 ## Usage
 
