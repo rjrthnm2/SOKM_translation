@@ -4,7 +4,7 @@ A comprehensive machine translation pipeline for English-to-Spanish translation 
 
 ## Features
 
-- **Multi-provider support**: OpenAI GPT-4 and Google Gemini
+- **Multi-provider support**: OpenAI GPT-4o and Google Gemini
 - **Dictionary-enhanced translation**: Uses spaCy for intelligent term matching
 - **Batch processing**: Efficient handling of large CSV datasets
 - **Automated evaluation**: BLEU, METEOR, WER, and COMET metrics
@@ -13,6 +13,7 @@ A comprehensive machine translation pipeline for English-to-Spanish translation 
 ## Privacy Notice
 
 This public repository contains the core translation pipeline code but excludes:
+
 - **System prompt files** (`system_prompt_*.txt`) - Contains domain-specific translation rules
 - **Dictionary files** (`en_es_dictionary.txt`) - Contains specialized terminology mappings
 - **API keys** (`.env` files) - Protected environment variables
@@ -23,6 +24,7 @@ See `system_prompt_example.md` for the general structure of system prompts.
 ## Setup
 
 1. **Install dependencies**:
+
    ```bash
    pip install openai google-generativeai python-dotenv pandas spacy
    pip install nltk jiwer comet-ml torch seaborn matplotlib
@@ -31,6 +33,7 @@ See `system_prompt_example.md` for the general structure of system prompts.
 
 2. **Configure environment**:
    Create a `.env` file in the `Final pipeline/` directory:
+
    ```
    OPENAI_API_KEY=your_openai_key_here
    GOOGLE_API_KEY=your_google_key_here
@@ -67,6 +70,7 @@ MT_PATTERN = "path/to/your/translated_*.csv"
 ```
 
 The reference CSV should have:
+
 - `Segment Text`: Original English text
 - `Translation_nativespeaker`: Human reference translation
 
@@ -84,7 +88,7 @@ Final pipeline/
 
 ## Models
 
-- **OpenAI**: GPT-4 Turbo with JSON response formatting
+- **OpenAI**: GPT-4o with JSON response formatting
 - **Google**: Gemini 2.5 Pro with structured output
 - **spaCy**: en_core_web_trf for linguistic analysis
 - **COMET**: Unbabel/wmt22-comet-da for translation evaluation
@@ -92,11 +96,13 @@ Final pipeline/
 ## Output
 
 Translated files are automatically named with model and configuration info:
+
 ```
 input_translated_d_openai_gpt_4_1_pv2.0.csv
 ```
 
 Where:
+
 - `d_` indicates dictionary was used
 - `openai_gpt_4_1` is the model identifier
 - `pv2.0` is the system prompt version
@@ -104,6 +110,7 @@ Where:
 ## Contributing
 
 When contributing, ensure:
+
 - No API keys or sensitive data in commits
 - System prompts and dictionaries remain private
 - Generic examples for configuration
